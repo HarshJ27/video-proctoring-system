@@ -21,7 +21,7 @@ const Dashboard = () => {
   const fetchSessions = async (status = 'all') => {
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch(`http://localhost:5005/api/sessions?status=${status}`, {
+      const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions?status=${status}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -55,7 +55,7 @@ const Dashboard = () => {
     
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5005/api/sessions', {
+      const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

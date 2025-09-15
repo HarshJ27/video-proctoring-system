@@ -20,7 +20,7 @@ const Interview = () => {
     const fetchSession = async () => {
       try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch(`http://localhost:5005/api/sessions/${sessionId}`, {
+        const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -64,7 +64,7 @@ const Interview = () => {
   const handleGenerateReport = async () => {
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch(`http://localhost:5005/api/reports/${sessionId}/generate`, {
+      const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/reports/${sessionId}/generate`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`

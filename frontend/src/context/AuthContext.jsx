@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch('http://localhost:5005/api/auth/login', {
+      const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password, role = 'interviewer') => {
     try {
-      const response = await fetch('http://localhost:5005/api/auth/register', {
+      const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

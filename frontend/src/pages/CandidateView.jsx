@@ -333,7 +333,7 @@ const CandidateView = () => {
     useEffect(() => {
         const fetchSession = async () => {
             try {
-                const response = await fetch(`http://localhost:5005/api/sessions/${sessionId}/public`);
+                const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}/public`);
                 const data = await response.json();
 
                 if (data.success) {
@@ -393,7 +393,7 @@ const CandidateView = () => {
         setEvents(prev => [...prev, newEvent]);
 
         try {
-            await fetch(`http://localhost:5005/api/sessions/${sessionId}/events`, {
+            await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}/events`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -428,7 +428,7 @@ const CandidateView = () => {
             await startVideo();
 
             // Start session in backend
-            const response = await fetch(`http://localhost:5005/api/sessions/${sessionId}/start`, {
+            const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}/start`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -472,7 +472,7 @@ const CandidateView = () => {
             if (faceTimerRef.current) clearTimeout(faceTimerRef.current);
             if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
 
-            const response = await fetch(`http://localhost:5005/api/sessions/${sessionId}/complete`, {
+            const response = await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}/complete`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

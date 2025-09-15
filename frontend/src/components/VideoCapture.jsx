@@ -89,7 +89,7 @@ const VideoCapture = ({ sessionId, onEventLog }) => {
     // Send to backend
     try {
       const token = localStorage.getItem('authToken');
-      await fetch(`http://localhost:5005/api/sessions/${sessionId}/events`, {
+      await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}/events`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const VideoCapture = ({ sessionId, onEventLog }) => {
       
       // Update session status in backend
       const token = localStorage.getItem('authToken');
-      await fetch(`http://localhost:5005/api/sessions/${sessionId}`, {
+      await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ const VideoCapture = ({ sessionId, onEventLog }) => {
     // Update session status in backend
     try {
       const token = localStorage.getItem('authToken');
-      await fetch(`http://localhost:5005/api/sessions/${sessionId}`, {
+      await fetch(`https://video-proctoring-system-0ond.onrender.com/api/sessions/${sessionId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
