@@ -3,7 +3,7 @@
 ## Quick Start
 
 1. Clone the repository
-git clone https://github.com/yourusername/video-proctoring-system.git
+git clone [https://github.com/yourusername/video-proctoring-system.git](https://github.com/HarshJ27/video-proctoring-system)
 cd video-proctoring-system
 
 2. Install backend dependencies
