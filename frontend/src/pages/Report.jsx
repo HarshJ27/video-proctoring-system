@@ -42,6 +42,7 @@ const Report = () => {
       setLoading(false);
     }
   };
+  
 
   const handleGenerateReport = async () => {
     setGenerating(true);
