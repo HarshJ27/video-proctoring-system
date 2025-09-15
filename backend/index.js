@@ -15,7 +15,7 @@ const app = express();
 
 // CORS setup (inline)
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://video-proctoring-system-sooty.vercel.app",
     credentials: true
   }));
 
